@@ -7,6 +7,5 @@ Bitrix\Main\Loader::registerAutoloadClasses(
         "\\AutoCatalog\\EquipmentTable" => 'lib/entity/equipment.php',
         "\\AutoCatalog\\CarTable"       => 'lib/entity/car.php',
         "\\AutoCatalog\\OptionTable"    => 'lib/entity/option.php',
-        "\\AutoCatalog\\Api"            => 'lib/Api.php'
     )
 );
