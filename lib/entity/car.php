@@ -2,6 +2,7 @@
 namespace AutoCatalog;
 
 use Bitrix\Main\Entity;
+
 use Bitrix\Main\ORM\Data\DataManager;
 use Bitrix\Main\ORM\Fields\Relations\ManyToMany;
 use Bitrix\Main\ORM\Fields\Relations\Reference;
@@ -12,11 +13,13 @@ class CarTable extends DataManager
     public static function getTableName()
     {
         return 'b_acatalog_cars';
+
     }
 
     public static function getMap()
     {
         return array(
+
             new Entity\IntegerField('ID', array(
                 'primary' => true,
                 'autocomplete' => true
@@ -32,6 +35,7 @@ class CarTable extends DataManager
             ))->configureJoinType('inner'),
             (new ManyToMany('OPTIONS', OptionTable::class))
                 ->configureTableName('b_acatalog_car_options'),
+
         );
     }
 }

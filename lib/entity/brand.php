@@ -6,6 +6,7 @@ use Bitrix\Main\ORM\Data\DataManager;
 use Bitrix\Main\ORM\Fields\Relations\OneToMany;
 
 class BrandTable extends DataManager
+
 {
     public static function getTableName()
     {
@@ -15,6 +16,7 @@ class BrandTable extends DataManager
     public static function getMap()
     {
         return array(
+
             new Entity\IntegerField('ID', array(
                 'primary' => true,
                 'autocomplete' => true
@@ -25,6 +27,7 @@ class BrandTable extends DataManager
                 ModelTable::class,
                 'BRAND')
             )->configureJoinType('inner')
+
         );
     }
 }

@@ -2,6 +2,7 @@
 namespace AutoCatalog;
 
 use Bitrix\Main\Entity;
+
 use Bitrix\Main\ORM\Data\DataManager;
 use Bitrix\Main\ORM\Fields\Relations\ManyToMany;
 use Bitrix\Main\ORM\Fields\Relations\Reference;
@@ -18,6 +19,7 @@ class EquipmentTable extends DataManager
     public static function getMap()
     {
         return array(
+
             new Entity\IntegerField('ID', array(
                 'primary' => true,
                 'autocomplete' => true
